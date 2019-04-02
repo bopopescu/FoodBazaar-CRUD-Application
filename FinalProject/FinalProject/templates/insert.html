@@ -1,0 +1,119 @@
+﻿<! This is the webpage for Insertion of Dataset records.
+Name:Rohan Anand
+Date-2018-11-10
+>
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ message }}.</h2>
+
+
+<div class="container">
+
+
+    <form id="SubCategory" enctype="multipart/form-data" action="/insertdata" method="post">
+        <div class="row">
+
+
+            <div class="col-md-3 form-group">
+                <label>Select a Ref Date</label>
+                <input type="text" name="Year" id="Year" class="form-control" placeholder="Ref Year" required>
+            </div>
+
+            <div class="col-md-3 form-group">
+                <label>GEo Loaction</label>
+                <input type="text" name="Country" id="Country" class="form-control" placeholder="Country" required>
+            </div>
+
+            <div class="col-md-3 form-group">
+                <label>DGUID</label>
+                <input type="text" name="DGUID" id="DGUID" class="form-control" placeholder="DGUID">
+            </div>
+
+            <div class="col-md-3 form-group">
+                <label>Food Category</label>
+                <input type="text" name="FoodCategory" id="FoodCategory" class="form-control" placeholder="Food Category">
+            </div>
+        </div>
+        <div class="row form-group">
+
+            <div class="col-md-2 form-group">
+                <label>Commodity </label>
+                <input type="text" name="Commodity" id="Commodity" class="form-control" placeholder="Commodity">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>UOM</label>
+                <input type="text" name="UOM" id="UOM" class="form-control" placeholder="UOM">
+            </div>
+            <div class="col-md-2 form-group">
+                <label>UOM_ID </label>
+                <input type="text" name="UOM_ID" id="UOM_ID" class="form-control" placeholder="UOM_ID">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>SCALAR_FACTOR </label>
+                <input type="text" name="SCALAR_FACTOR" id="SCALAR_FACTOR" class="form-control" placeholder="SCALAR_FACTOR">
+            </div>
+            <div class="col-md-2 form-group">
+                <label>SCALAR_FACTORID </label>
+                <input type="text" name="SCALAR_FACTORID" id="SCALAR_FACTORID" class="form-control" placeholder="SCALAR_FACTORID">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>VECTOR</label>
+                <input type="text" name="VECTOR" id="VECTOR" class="form-control" placeholder="VECTOR">
+            </div>
+
+        </div>
+        <div class="row form-group">
+
+            <div class="col-md-2 form-group">
+                <label>COORDINATE </label>
+                <input type="text" name="COORDINATE" id="COORDINATE" class="form-control" placeholder="COORDINATE">
+            </div>
+            <div class="col-md-2 form-group">
+                <label>VALUE </label>
+                <input type="text" name="VALUE" id="VALUE" class="form-control" placeholder="VALUE">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>STATUS </label>
+                <input type="text" name="STATUS" id="STATUS" class="form-control" placeholder="STATUS">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>SYMBOL </label>
+                <input type="text" name="SYMBOL" id="SYMBOL" class="form-control" placeholder="SYMBOL">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>TERMINATED </label>
+                <input type="text" name="TERMINATED" id="TERMINATED" class="form-control" placeholder="TERMINATED">
+            </div>
+
+            <div class="col-md-2 form-group">
+                <label>Decimal </label>
+                <input type="text" name="Decimal" id="Decimal" class="form-control" placeholder="Decimal">
+            </div>
+        </div>
+
+
+        <div class="row form-group">
+
+
+            <div class="col-md-3 form-group">
+
+                <input type="submit" name="Postdata" id="Postdata" value="Submit" class="form-control btn btn-primary">
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+
+
+{% endblock %}

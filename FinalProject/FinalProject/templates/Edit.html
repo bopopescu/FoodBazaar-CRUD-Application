@@ -1,0 +1,169 @@
+﻿<! This is the page for editing  the dataset in the form of table.
+Name:Rohan Anand
+Date-2018-11-10
+>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} -Food Bazaar Crud Application</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrapValidator.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">Rohan Anand  Food Bazaar Crud Application</a>
+            </div>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="../upload">Upload CSV</a></li>
+                <li><a href="../view">View Data</a></li>
+                <li><a href="../insert">Insert Data</a></li>
+                <li><a href="../logout">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+
+        <h2>{{ message }}.</h2>
+
+        <div class="container">
+
+
+
+            <form id="SubCategory" enctype="multipart/form-data" action="/updatedata" method="post">
+                {% for rows in result %}
+
+                <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label>ID</label>
+                        <input type="text" name="ID" id="ID" class="form-control" value="{{rows.ID }}" placeholder="ID" readonly>
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>Select a Ref Date</label>
+                        <input type="text" name="Year" id="Year" class="form-control" value="{{rows.REF_DATE }}" placeholder="Ref Year" required>
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>GEo Loaction</label>
+                        <input type="text" name="Country" id="Country" class="form-control" value="{{rows.GEO}}" placeholder="Country" required>
+                    </div>
+
+                    <div class="col-md-3 form-group">
+                        <label>DGUID</label>
+                        <input type="text" name="DGUID" id="DGUID" class="form-control" value="{{rows.DGUID}}" placeholder="DGUID">
+                    </div>
+
+                    <div class="col-md-3 form-group">
+                        <label>Food Category</label>
+                        <input type="text" name="FoodCategory" id="FoodCategory" class="form-control" value="{{rows.Food_categories }}" placeholder="Food Category">
+                    </div>
+                </div>
+                <div class="row form-group">
+
+                    <div class="col-md-2 form-group">
+                        <label>Commodity </label>
+                        <input type="text" name="Commodity" id="Commodity" value="{{rows.Commodity}}" class="form-control" placeholder="Commodity">
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>UOM</label>
+                        <input type="text" name="UOM" id="UOM" class="form-control" value="{{rows.UOM}}" placeholder="UOM">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label>UOM_ID </label>
+                        <input type="text" name="UOM_ID" id="UOM_ID" class="form-control" value="{{rows.UOM_ID}}" placeholder="UOM_ID">
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>SCALAR_FACTOR </label>
+                        <input type="text" name="SCALAR_FACTOR" id="SCALAR_FACTOR" value="{{rows.SCALAR_FACTOR}}" class="form-control" placeholder="SCALAR_FACTOR">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label>SCALAR_FACTORID </label>
+                        <input type="text" name="SCALAR_FACTORID" id="SCALAR_FACTORID" value="{{rows.SCALAR_FACTORID}}" class="form-control" placeholder="SCALAR_FACTORID">
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>VECTOR</label>
+                        <input type="text" name="VECTOR" id="VECTOR" class="form-control" value="{{rows.VECTOR}}" placeholder="VECTOR">
+                    </div>
+
+                </div>
+                <div class="row form-group">
+
+                    <div class="col-md-2 form-group">
+                        <label>COORDINATE </label>
+                        <input type="text" name="COORDINATE" id="COORDINATE" class="form-control" value="{{rows.COORDINATE}}" placeholder="COORDINATE">
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label>VALUE </label>
+                        <input type="text" name="VALUE" id="VALUE" class="form-control" value="{{rows.ColumnVALUE}}" placeholder="VALUE">
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>STATUS </label>
+                        <input type="text" name="STATUS" id="STATUS" class="form-control" value="{{rows.ColumnSTATUS}}" placeholder="STATUS">
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>SYMBOL </label>
+                        <input type="text" name="SYMBOL" id="SYMBOL" class="form-control" value="{{rows.SYMBOL}}" placeholder="SYMBOL">
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>TERMINATED </label>
+                        <input type="text" name="TERMINATED" id="TERMINATED" value="{{rows.ColumnTERMINATED}}" class="form-control" placeholder="TERMINATED">
+                    </div>
+
+                    <div class="col-md-2 form-group">
+                        <label>Decimal </label>
+                        <input type="text" name="Decimal" id="Decimal" value="{{rows.DECIMALS}}" class="form-control" placeholder="Decimal">
+                    </div>
+                </div>
+
+                {% endfor %}
+                <div class="row form-group">
+
+
+                    <div class="col-md-3 form-group">
+
+                        <input type="submit" name="Postdata" id="Postdata" value="Submit" class="form-control btn btn-primary">
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+        <hr />
+
+
+        <footer>
+            <p>&copy; {{ year }} - This Crud Web Application Developed by : Rohan Anand</p>
+        </footer>
+    </div>
+
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/bootstrapValidator.min.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+
+
+</body>
+</html>
+

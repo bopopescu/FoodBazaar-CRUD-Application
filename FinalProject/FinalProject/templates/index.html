@@ -1,0 +1,121 @@
+﻿<! This is the indexing  page.
+Name:Rohan Anand
+Date-2018-11-10
+>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} -Food Bazaar Crud Application</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrapValidator.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">Rohan Anand Food Bazaar Crud Application</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <!--
+        <div class="jumbotron">
+            <h1>Flask</h1>
+            <p class="lead">Flask is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+            <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        </div>
+        -->
+        <div class="row">
+            <div class="col-md-4">
+
+                <p>
+                    <img src="static/images/mainlogo.png" class="img-responsive" />
+                </p>
+
+            </div>
+
+            <div class="col-md-8">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <h2 class="text-success pull-right">Welcome to FoodBazaar Crud Application</h2>
+                <br />
+                <br />
+                <br />
+                <br />
+                <h1 class="pull-right">Developed by : Rohan Anand</h1>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <p align="right"><a class="btn btn-danger btn-lg" href="login">Start Here</a></p>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
+            </div>
+        </div>
+
+        <hr />
+        <footer>
+            <p>&copy; {{ year }} - This Crud Web Application Developed by : Rohan Anand</p>
+        </footer>
+    </div>
+
+    <script src="/static/scripts/jquery-1.10.2.js"></script>
+    <script src="/static/scripts/bootstrap.js"></script>
+    <script src="/static/scripts/bootstrapValidator.min.js"></script>
+    <script src="/static/scripts/respond.js"></script>
+    {% block scripts %}{% endblock %}
+    <script>
+
+        $('#LoginForm').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                Username: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Name is required'
+                        }
+                    }
+                },
+                Pass: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Password is required'
+                        }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>

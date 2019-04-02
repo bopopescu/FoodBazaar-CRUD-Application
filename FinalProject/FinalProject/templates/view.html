@@ -1,0 +1,54 @@
+<! This is the page for Viewing the dataset in the form of table  when u insert new record.
+Name:Rohan Anand
+Date-2018-11-10
+>
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Data View From Table</h1>
+
+<div class="container">
+
+
+    <table class="table table-bordered" style="font-size:12px">
+
+        <tr>
+            <th>ID</th>
+            <th>RefDate</th>
+            <th>GEO </th>
+            <th>DGUID</th>
+            <th>FoodCategory</th>
+            <th>Commodity</th>
+            <th>UOM</th>
+            <th>UOM_ID</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        <tbody>
+            {% for rows in result %}
+            <tr>
+                <td>{{rows.ID }}</td>
+                <td>{{rows.REF_DATE }}</td>
+                <td>{{rows.GEO}}</td>
+                <td>{{rows.DGUID}}</td>
+                <td>{{rows.Food_categories }}</td>
+                <td>{{rows.Commodity }}</td>
+                <td>{{rows.UOM}}</td>
+                <td>{{rows.UOM_ID}}</td>
+                <td><a href="edit/{{rows.ID }}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+                <td><a href="javascript:deletedept({{ rows.ID }})"><span class="glyphicon glyphicon-trash"></a></td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+
+
+    </table>
+
+
+
+
+    {% endblock %}

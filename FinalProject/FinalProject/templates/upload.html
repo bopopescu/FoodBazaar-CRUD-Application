@@ -1,0 +1,47 @@
+<! This is the page for Uploading the dataset CSV file.
+Name:Rohan Anand
+Date-2018-11-10
+>
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+
+            <img src="static/images/csv.png" class="img-thumbnail">
+        </div>
+        <div class="col-md-7">
+
+            <form id="SubCategory" enctype="multipart/form-data" class="form-horizontal" action="readContents" method="post">
+                <h3 style="font-weight:900">UPLOAD DATE FILE(CSV Format Only) </h3>
+                <div class="form-group">
+
+                    <label>Select a Exam Date Sheet</label>
+                    <input type="file" name="DataFileUpload" id="DataFileUpload" class="form-control" placeholder="">
+                </div>
+
+
+                <div class="form-group col-md-4">
+
+                    <br>
+                    <input type="submit" name="Postdata" id="Postdata" value="Submit" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</div>
+
+{% endblock %}

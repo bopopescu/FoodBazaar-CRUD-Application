@@ -1,0 +1,63 @@
+﻿<! This is the Home page with upload ,insert and view option for now.
+Name:Rohan Anand
+Date-2018-11-10
+>
+
+
+
+
+{% extends "layout.html" %}
+
+{% block content %}
+<!--
+<div class="jumbotron">
+    <h1>Flask</h1>
+    <p class="lead">Flask is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://flask.pocoo.org/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+-->
+<div class="row">
+    <div class="col-md-4">
+
+        <p>
+            <img src="static/images/mainlogo.png" class="img-responsive" />
+        </p>
+
+    </div>
+
+    <div class="col-md-8">
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2 class="text-success pull-right">Home Page of FoodBazaar Crud Application</h2>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-md-4"><a class="btn btn-danger form-control" href="upload">Upload CSV FIle Data</a> </div>
+            <div class="col-md-4"><a class="btn btn-danger  form-control" href="insert">Insert Data</a> </div>
+            <div class="col-md-4"> <a class="btn btn-danger form-control" href="view">View Data</a></div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+    </div>
+</div>
+
+{% endblock %}
